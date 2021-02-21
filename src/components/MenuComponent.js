@@ -24,7 +24,7 @@ function Menu(){
         
         <div className="container">
             <div className="row">
-                <Media list>{dishes.map(createDishList)}</Media>        
+                {dishes.map(createDishList)}       
             </div>
 
         </div>
