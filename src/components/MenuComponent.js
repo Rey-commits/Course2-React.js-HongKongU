@@ -6,17 +6,9 @@ class Menu extends Component{
 
     constructor(props){
         super(props);
-
-        // stores iproperties of this component
-
-        console.log('Menu component constructed');
-        
+        console.log('Menu component constructed');  
     }
-
     
-
-
-
     render(){
         console.log('renders menu component');
         
