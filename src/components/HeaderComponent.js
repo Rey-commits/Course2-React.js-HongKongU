@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react"
-import { Navbar, NavbarBrand, Jumbotron } from "reactstrap";
-
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,  Jumbotron } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
     render() {
         return(
             <>
-             <Navbar dark color="primary">
-              <div className="container">
-              <NavbarBrand href="/"> Ristorante Con Fusion </NavbarBrand>
-              </div>
+             <Navbar dark expand="md">
+                 <div className="container">
+                     <NavbarBrand href="/"> Ristorante Con Fusion </NavbarBrand>
+                 </div>
              </Navbar>
              <Jumbotron>
                  <div className="container">
