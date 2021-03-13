@@ -101,6 +101,24 @@ class Contact extends Component {
                                            value={this.state.firstname}/>
                                 </Col>
                             </FormGroup>
+                            <FormGroup row>
+                                <Col md={{size: 6, offset: 2}}>
+                                    <FormGroup check>
+                                        <Label check>
+                                            <Input type="checkbox" name="agree"
+                                            checked={this.state.agree}/>{" "}
+                                            <strong>May we contact you?</strong> 
+                                        </Label>
+                                    </FormGroup>
+                                </Col>
+                                <Col md={{size: 3, offset: 1}}>
+                                    <Input type="select" name="contactType" 
+                                    value={this.state.contactType} >
+                                        <option>Tel.</option>
+                                        <option>Email</option>
+                                    </Input>
+                                </Col>
+                            </FormGroup>
                         </Form>
                     </div>
                 </div>
