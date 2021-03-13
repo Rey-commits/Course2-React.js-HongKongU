@@ -28,7 +28,7 @@ class Main extends Component {
             promotions: PROMOTIONS,
         };
 
-    }
+    } 
 
     render() {
 
