@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
-             Button, Modal, ModalHeader, ModalBody} from "reactstrap";
+             Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input} from "reactstrap";
 import {  NavLink } from 'react-router-dom';
 
 class Header extends Component{
@@ -100,7 +100,25 @@ class Header extends Component{
                     <ModalHeader toggle={this.toggleModal}>
                     Login
                     </ModalHeader>
-                    <ModalBody></ModalBody>
+                    <ModalBody>
+                        <Form onSubmit={this.handleLogin} >
+                            <FormGroup>
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="text" id="username" name="username" ></Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" id="password" name="password" ></Input>
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="checkbox" name="remember" />
+                                    Remember me
+                                </Label>
+                            </FormGroup>
+                            <Button type="submit" value="submit" color="primary">Login</Button>
+                        </Form>
+                    </ModalBody>
                 </Modal>
             </React.Fragment>
         );
