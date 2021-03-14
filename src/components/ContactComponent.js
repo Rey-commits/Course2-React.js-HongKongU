@@ -77,8 +77,11 @@ class Contact extends Component {
 
         if (this.state.touched.email && email.split("").filter(x => x === "@" ).length !== 1)
             erros.email = "Email should contain a @"
+
+        return errors;
     }
     render(){
+        const errors = this.validate(this.firstname, this.state.lastname, this.state.lastname, this.state.telnum, this.state.email);
         return (
             <div className="container">
                 <div className="row">
@@ -136,7 +139,8 @@ class Contact extends Component {
                                            placeholder="First Name" 
                                            value={this.state.firstname}
                                            onChange={this.handleInputChange}
-                                           />                                    
+                                           />
+                                    <FormFeedback>{errors.firstname} </FormFeedback>                                    
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -146,7 +150,8 @@ class Contact extends Component {
                                            placeholder="Last Name" 
                                            value={this.state.lastname}
                                            onChange={this.handleInputChange}
-                                           />    
+                                           />
+                                    <FormFeedback>{errors.lastname} </FormFeedback>    
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -156,7 +161,8 @@ class Contact extends Component {
                                            placeholder="Tel. Number" 
                                            value={this.state.telnum}
                                            onChange={this.handleInputChange}
-                                           />                                    
+                                           />
+                                    <FormFeedback>{errors.telnum} </FormFeedback>                                    
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -167,6 +173,7 @@ class Contact extends Component {
                                            value={this.state.email}
                                            onChange={this.handleInputChange}
                                            />
+                                    <FormFeedback>{errors.email} </FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
