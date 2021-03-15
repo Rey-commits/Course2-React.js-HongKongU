@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 
@@ -9,17 +10,26 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import DishDetail from './DishdetailComponent';
 
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-
-import { Switch, Route, Redirect } from 'react-router-dom';
-
+const mapStateToProps = state => {
+        return {
+            dishes: state.dishes,
+            comments: state.components,
+            promotions: state.promotions,
+            leaders: state.leaders
+        }
+}
 
 class Main extends Component {
 
     constructor(props) {
         super(props);
 
-    } 
+    }
+    
+    
 
     render() {
 
@@ -81,4 +91,4 @@ class Main extends Component {
 
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
