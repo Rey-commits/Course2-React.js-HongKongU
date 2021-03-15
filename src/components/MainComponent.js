@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 
 import Home from './HomeComponent';
@@ -8,10 +9,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import DishDetail from './DishdetailComponent';
 
-import { COMMENTS } from '../shared/comments'
-import { DISHES } from '../shared/dishes'
-import { LEADERS } from '../shared/leaders'
-import { PROMOTIONS } from '../shared/promotions'
+
 
 import { Switch, Route, Redirect } from 'react-router-dom';
 
@@ -20,13 +18,6 @@ class Main extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            comments: COMMENTS,
-            dishes: DISHES,
-            leaders: LEADERS,
-            promotions: PROMOTIONS,
-        };
 
     } 
 
